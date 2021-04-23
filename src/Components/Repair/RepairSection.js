@@ -76,7 +76,7 @@ const RepairSection = () => {
 
       <Grid container className={classes.container}>
         <Grid item lg={6} md={6} sm={12} xs={12}>
-            <Box pt={2}>
+            <Box pt={1}>
             <img src={RepairImage} alt="repair" className={classes.repairSideImage}/>
             </Box>
         </Grid>
