@@ -66,8 +66,8 @@ const OurService = () => {
         <Typography variant="h3" color="initial" className={classes.ourService}>Our Services</Typography>
         </Grid>
         <Grid item lg={6} md={6} sm={12} xs={12}>
-          <Box pl={4}>
-            <Box px={3}>
+          <Box px={2}>
+            <Box>
               <img
                 src={Warehouse}
                 alt="ware-house"
@@ -87,7 +87,7 @@ const OurService = () => {
               </Typography>
             </Box>
             <Box my={4}>
-              <Box px={3}>
+              <Box>
                 <img
                   src={Garage}
                   alt="ware-house"
