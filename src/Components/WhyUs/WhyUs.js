@@ -14,20 +14,31 @@ const useStyles = makeStyles((theme) => ({
     padding: "100px 150px",
     paddingRight:"0 !important",
     backgroundColor:"#E5E3FF",
-    [theme.breakpoints.down("xs")]: {
-      padding: "30px 40px",
-    },
-    [theme.breakpoints.down("md")]: {
-        padding: "30px 60px",
-      },
+    [theme.breakpoints.down('xs')]:{
+      paddingTop:"40px !important",
+      paddingLeft:"20px !important",
+      paddingRight:"20px !important"
+    }, 
+    [theme.breakpoints.down('md')]:{
+      paddingTop:"40px !important",
+      paddingLeft:"20px !important",
+      paddingRight:"20px !important"
+    }
+   
   },
   sectionHeading: {
     fontSize: "34px",
     textAlign: "center",
     fontWeight: "bold",
+    [theme.breakpoints.down('xs')]:{
+      fontSize:"20px"
+    }, 
+    [theme.breakpoints.down('md')]:{
+      fontSize:"22px"
+    }
   },
   image:{
-      width:"100% !important"
+      width:"80% !important"
   },
   ourServiceBtn:{
     width:"266px",
@@ -38,19 +49,29 @@ const useStyles = makeStyles((theme) => ({
     borderRadius:"10px", 
     '&:hover':{
     backgroundColor:"#4082db", 
-
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize:"16px", 
+      width:"230px",
+      height:"50px", 
+      marginBottom:"30px"
     }
 }, 
-leftDiv:{
-    padding:"35px 0"
-}
+bookaServiceBtnDiv:{
+  [theme.breakpoints.down('xs')]:{
+    textAlign:"center"
+  }
+},
+  // leftContent:{
+  //   paddingRight:"40px"
+  // }
 }));
 
 const WhyUs = () => {
   const classes = useStyles();
   return (
     <Container maxWidth="xl"  className={classes.root} >
-      <Grid container alignItems="center">
+      <Grid container spacing={10} alignItems="center">
         <Grid item lg={6} md={6} sm={12} xs={12} className={classes.leftDiv}>
           <Typography
             variant="h2"
@@ -59,7 +80,7 @@ const WhyUs = () => {
           >
             Why Us
           </Typography>
-          <Box my={3} pr={4}>
+          <Box my={3} className={classes.leftContent}>
             <Typography variant="p" component="p" color="initial">
               When you need your door repaired or installed, you need it done
               now and that makes it difficult to vet out the real professionals
@@ -92,11 +113,13 @@ const WhyUs = () => {
               anyone else.
             </Typography>
           </Box>
+            <Box className={classes.bookaServiceBtnDiv}>
             <Button className={classes.ourServiceBtn} variant="contained" >
               Book a Service
             </Button>
+            </Box>
         </Grid>
-        <Grid item lg={6} lg={6} md={6} sm={12} xs={12}>
+        <Grid item lg={6} lg={6} md={6} sm={12} xs={12} style={{textAlign:"right"}}>
             <img src={WhyUsSideImage} alt="why-us" className={classes.image} />
         </Grid>
 

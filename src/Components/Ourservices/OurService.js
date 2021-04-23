@@ -12,10 +12,10 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "0 !important",
     paddingTop:"0 !important",
     [theme.breakpoints.down("xs")]: {
-      padding: "30px 40px",
+      padding: "30px 0",
     },
     [theme.breakpoints.down("md")]: {
-      padding: "30px 40px",
+      padding: "30px 12px",
     },
   },
   rightSideImage: {
@@ -27,7 +27,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     clipPath: "polygon(0 0, 100% 0, 65% 100%, 0% 100%)",
-    width:"100%"
+    width:"100%",
+    [theme.breakpoints.down('xs')]:{
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+
+    }
   },
   ourserviceIcons: {
     height: "58px",

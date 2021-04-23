@@ -2,3 +2,8 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif !important;
 }
+
+html, body
+{
+  overflow-x: hidden;
+}

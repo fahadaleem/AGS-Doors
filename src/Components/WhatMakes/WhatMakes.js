@@ -22,7 +22,13 @@ const useStyles = makeStyles(theme=>({
         fontSize:"34px", 
         textAlign:"center", 
         fontWeight:"bold", 
-        color:"white"
+        color:"white", 
+        [theme.breakpoints.down('xs')]:{
+            fontSize:"20px"
+          }, 
+          [theme.breakpoints.down('md')]:{
+            fontSize:"22px"
+          }
     },
     servicesTitle:{
         padding:"10px 0",

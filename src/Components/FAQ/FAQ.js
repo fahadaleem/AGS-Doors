@@ -49,10 +49,10 @@ const useStyle = makeStyles((theme) => ({
     fontSize: "22px",
     color: "white",
     [theme.breakpoints.down('xs')]:{
-    fontSize: "18px",
-    width: 230,
-    height: 61,
-
+      fontSize:"16px", 
+      width:"230px",
+      height:"50px", 
+      marginBottom:"30px"
     }
   },
 }));

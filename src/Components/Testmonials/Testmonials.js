@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme=>({
             //   },
             // paddingRight:"0 !important",
             overflow:"hidden !important", 
-            margin:"40px 0"
+            // margin:"40px 0"
           },
     testmonialHeading: {
         fontWeight: "bold",

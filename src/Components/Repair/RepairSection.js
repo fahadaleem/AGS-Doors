@@ -5,13 +5,13 @@ import RepairImage from "../../assests/repair-side-image.svg"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: "100px 150px",
+    padding: "100px 0",
     paddingLeft:"0 !important",
     [theme.breakpoints.down("xs")]: {
-      padding: "30px 40px",
+      padding: "30px 10px",
     },
     [theme.breakpoints.down('md')]:{
-        padding:"30px 40px"
+        padding:"30px 10px"
     },
   paddingBottom:"0 !important"
 
@@ -32,18 +32,29 @@ const useStyles = makeStyles((theme) => ({
   repairHeading:{
     fontSize:"34px", 
     textAlign:"center", 
-    fontWeight:"bold"
+    fontWeight:"bold", 
+    [theme.breakpoints.down('xs')]:{
+      fontSize:"20px"
+    }, 
+    [theme.breakpoints.down('md')]:{
+      fontSize:"22px"
+    }
   },
-  sideContent:{
-
-  },
+  
   container:{
-    margin:"100px 0 0 0"
+    margin:"50px 0 0 0",
+    paddingRight:"150px", 
+    [theme.breakpoints.down('sm')]:{
+    paddingRight:"0px", 
+    }
   },
   repairSideImage:{
       height:"auto",
       width:"100%", 
-      clipPath: "polygon(0 0, 66% 0, 100% 100%, 0% 100%)"
+      clipPath: "polygon(0 0, 66% 0, 100% 100%, 0% 100%)", 
+      [theme.breakpoints.up('xl')]:{
+        width:"80%"
+      }
   },
   ourServiceBtn:{
       width:"266px",
@@ -55,7 +66,18 @@ const useStyles = makeStyles((theme) => ({
       '&:hover':{
       backgroundColor:"#4082db", 
 
+      },
+      [theme.breakpoints.down('xs')]:{
+        fontSize:"16px", 
+        width:"230px",
+        height:"50px", 
+        marginBottom:"30px"
       }
+  },
+  ourServiceBtnDiv:{
+    [theme.breakpoints.down('xs')]:{
+      textAlign:"center"
+    }
   }
 }));
 
@@ -71,7 +93,15 @@ const RepairSection = () => {
         align="center"
         className={classes.repairHeading}
       >
-        Repairs By ASG Doors and Gates<br /> It’s What We Do Best!
+        Repairs By ASG Doors and Gates
+      </Typography>
+      <Typography
+        variant="h3"
+        color="initial"
+        align="center"
+        className={classes.repairHeading}
+      >
+        It's What We Do Best!
       </Typography>
 
       <Grid container className={classes.container}>
@@ -81,7 +111,7 @@ const RepairSection = () => {
             </Box>
         </Grid>
         <Grid item lg={6} md={6} sm={12} xs={12}>
-        <Box px={4} py={2} className={classes.sideContent}>
+        <Box px={2} py={2} className={classes.sideContent}>
         <Typography variant="p" color="initial" display="block">
             When you think about a garage door, what comes to mind? This simple
             feature to your home or commercial building really has two important
@@ -108,7 +138,7 @@ const RepairSection = () => {
             ASG Doors and Gates.
           </Typography>
         </Box>
-        <Box p={4}>
+        <Box p={4} className={classes.ourServiceBtnDiv}>
             <Button className={classes.ourServiceBtn} variant="contained" >
               Our Services
             </Button>

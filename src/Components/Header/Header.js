@@ -14,12 +14,14 @@ const useStyle = makeStyles((theme) => ({
   root: {
     padding: "0 !important",
     
+    
   },
   leftSide: {
     background: `linear-gradient(90deg, rgba(38, 147, 255,0.8), rgba(38, 147, 255,0.8)), url('Layer 17@1X.png')`,
     backgroundPosition: "center",
     // height:"250px",
     padding: "60px 20px 20px 105px",
+    width:"150%",
 
     [theme.breakpoints.down('xs')]:{
     padding: "60px 20px 20px 35px",
@@ -45,7 +47,49 @@ const useStyle = makeStyles((theme) => ({
   headerImage:{
       width:"100%", 
       clipPath: 'polygon(0 0, 100% 0, 100% 100%, 38% 100%)'
-  }
+  }, 
+  ourServiceBtn:{
+    width:"200px",
+    height:"52px", 
+    backgroundColor:"#1A519B", 
+    color:"white",
+    fontSize:"16px", 
+    borderRadius:"10px", 
+    
+    '&:hover':{
+    backgroundColor:"#4082db", 
+
+    },
+    [theme.breakpoints.up('xl')]:{
+      position:"relative",
+     top:"-200px",
+     left:"600px",
+    },
+    [theme.breakpoints.up('lg')]:{
+      position:"relative",
+     top:"-150px",
+     left:"340px",
+    },
+    [theme.breakpoints.up('md')]:{
+      position:"relative",
+     top:"-120px",
+     left:"340px",
+    },
+    [theme.breakpoints.up('sm')]:{
+      position:"relative",
+     top:"-120px",
+     left:"340px",
+    },
+    [theme.breakpoints.down('xs')]:{
+      fontSize:"16px", 
+      width:"180px",
+      height:"50px", 
+      marginBottom:"30px", 
+      position:"relative",
+     top:"-100px",
+     left:"150px",
+    }
+},
 }));
 
 const Header = () => {
@@ -86,8 +130,13 @@ const Header = () => {
             </Box>
           </div>
         </Grid>
-        <Grid item lg={6} md={6} sm={12} xs={12}>
+        <Grid item lg={6} md={6} sm={12} xs={12} style={{padding:"0"}}>
             <img src={HeaderImage} alt="header-image" className={classes.headerImage} />
+            <Box p={4} className={classes.ourServiceBtnDiv}>
+            <Button startIcon={<PhoneIcon />} className={classes.ourServiceBtn} variant="contained" >
+              Call Now
+            </Button>
+        </Box>
         </Grid>
       </Grid>
     </Container>
