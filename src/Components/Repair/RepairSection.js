@@ -14,10 +14,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "100px 0",
     paddingLeft: "0 !important",
     [theme.breakpoints.down("xs")]: {
-      padding: "30px 10px",
+      padding: "0px 10px",
     },
     [theme.breakpoints.down("md")]: {
-      padding: "30px 10px",
+      padding: "0px 10px",
     },
     paddingBottom: "0 !important",
   },
